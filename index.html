@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sangam Hotel</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- =================== NAVBAR =================== -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">
+        <a href="#home" class="brand-link">Sangam Hotel</a>
+      </div>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#order">OrderNow</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#reviews">Review</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =================== HOME =================== -->
+  <section id="home" class="section home-section">
+    <div class="home-wrap container">
+      <div class="home-text">
+        <h1 class="reveal delay-1">
+          Taste the <span>Tradition</span>, Love the <span>Flavor</span>
+        </h1>
+        <p class="reveal delay-2">
+          Welcome to <strong>Sangam Hotel</strong>, where classic recipes meet modern vibes.
+          From sizzling tandoors to comforting curries, every plate is crafted with care.
+          Dine-in, take away, or order online—we’ve got your cravings covered.
+        </p>
+        <div class="home-cta reveal delay-3">
+          <a href="#menu" class="btn primary">Explore Menu</a>
+          <a href="#order" class="btn ghost">Order Now</a>
+        </div>
+      </div>
+
+      <div class="home-visual">
+        <div class="big-dish float-up reveal delay-2" aria-hidden="true"></div>
+        <img class="float-bob reveal delay-3" src="images/leaf.png" alt="" onerror="this.style.display='none'"/>
+        <img class="float-bob-slow reveal delay-4" src="images/chilli.png" alt="" onerror="this.style.display='none'"/>
+        <img class="float-bob reveal delay-5" src="images/spoon.png" alt="" onerror="this.style.display='none'"/>
+      </div>
+    </div> 
+
+    <div class="home-showcase container reveal delay-4">
+      <div class="showcard"><span>🍛</span><p>Authentic Curries</p></div>
+      <div class="showcard"><span>🔥</span><p>Tandoor Specials</p></div>
+      <div class="showcard"><span>🥘</span><p>South-Indian Delights</p></div>
+      <div class="showcard"><span>🥤</span><p>Fresh Beverages</p></div>
+    </div>
+  </section>
+
+  <!-- =================== MENU =================== -->
+  <section id="menu" class="section menu-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Our Menu</h2>
+        <p>Hand-picked favorites at pocket-friendly prices.</p>
+      </div>
+
+      <div class="filters reveal">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="veg">Veg</button>
+        <button class="chip" data-filter="non-veg">Non-Veg</button>
+        <button class="chip" data-filter="drinks">Drinks</button>
+      </div>
+      <div id="menuGrid" class="menu-grid reveal">
+        <!-- JS will populate menu cards here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== ORDER NOW =================== -->
+  <section id="order" class="section order-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Your Cart</h2>
+        <p>Review your items and place the order.</p>
+      </div>
+
+      <div class="order-wrap reveal">
+        <div class="cart" id="cartList">
+          <!-- JS renders cart items -->
+        </div>
+
+        <div class="summary">
+          <h3>Order Summary</h3>
+          <div class="sum-row">
+            <span>Subtotal</span>
+            <span id="subtotal">₹0</span>
+          </div>
+          <div class="sum-row">
+            <span>GST (5%)</span>
+            <span id="tax">₹0</span>
+          </div>
+          <div class="sum-row total">
+            <span>Total</span>
+            <span id="total">₹0</span>
+          </div>
+          <button id="placeOrder" class="btn primary block">Place Order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== LOCATION =================== -->
+  <section id="location" class="section location-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Find Us</h2>
+        <p>We’re right around the corner—drop by!</p>
+      </div>
+      <div class="map-wrap reveal">
+        <!-- Replace src with your exact Google Maps embed link -->
+        <iframe
+          title="Sangam Hotel Location"
+          width="100%" height="420" style="border:0;"
+          loading="lazy" allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.0000000000005!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSangam%20Hotel!5e0!3m2!1sen!2sin!4v1700000000000">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== REVIEWS =================== -->
+  <section id="reviews" class="section review-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>What People Say</h2>
+        <p>Real words from happy customers.</p>
+      </div>
+
+      <div id="reviewList" class="reviews reveal">
+        <!-- JS preloads some sample reviews -->
+      </div>
+
+      <div class="review-form-wrap reveal">
+        <h3>Leave a Review</h3>
+        <form id="reviewForm" class="review-form" novalidate>
+          <div class="two">
+            <input type="text" id="revName" placeholder="Your Name" required/>
+            <input type="email" id="revEmail" placeholder="Email ID" required/>
+          </div>
+          <textarea id="revMsg" rows="4" placeholder="Write your review..." required></textarea>
+          <button type="submit" class="btn primary">Submit Review</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="foot-left">
+        <a href="#home" class="brand-link small">Sangam Hotel</a>
+        <p>Serving happiness, one plate at a time.</p>
+      </div>
+      <div class="foot-social">
+        <a aria-label="Facebook" href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a aria-label="Instagram" href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+      <div class="foot-copy">
+        © <span id="year"></span> Sangam Hotel. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
